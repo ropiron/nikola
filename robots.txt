@@ -1,0 +1,4 @@
+Sitemap: https://www.sn3y.com/sitemapindex.xml
+
+User-Agent: *
+Host: www.sn3y.com

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sn3y-blog (OpenCVについての文書)</title><link>https://www.sn3y.com/</link><description></description><atom:link href="https://www.sn3y.com/categories/opencv.xml" rel="self" type="application/rss+xml"></atom:link><language>ja</language><copyright>Contents © 2020 &lt;a href="mailto:hirothedon@tutanota.com"&gt;sn3y&lt;/a&gt; </copyright><lastBuildDate>Sat, 23 May 2020 14:08:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>OpenCVカスケード分類器の作成方法</title><link>https://www.sn3y.com/posts/cascade-trainer1/</link><dc:creator>sn3y</dc:creator><description>&lt;div id="outline-container-orgad22a84" class="outline-2"&gt;
+&lt;h2 id="orgad22a84"&gt;目標&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgad22a84"&gt;
+&lt;p&gt;
+OpenCVを用いてカスケード分類器を作成する。
+今回は雑草の検知を目標とする。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org940e1ba" class="outline-2"&gt;
+&lt;h2 id="org940e1ba"&gt;環境&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org940e1ba"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Ubuntu 18.04&lt;/li&gt;
+&lt;li&gt;fish shell&lt;/li&gt;
+&lt;li&gt;Anaconda(Python3.7.6)&lt;/li&gt;
+&lt;li&gt;OpenCV&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+カスケード分類器の詳細については、他ブログ参照のこと。
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org6519652" class="outline-2"&gt;
+&lt;h2 id="org6519652"&gt;作業フォルダの作成&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org6519652"&gt;
+&lt;p&gt;
+作業フォルダを作成する。
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;pos ・・・正解画像用フォルダ（ポジティブ画像）&lt;/li&gt;
+&lt;li&gt;neg ・・・不正解画像用フォルダ（ネガティブ画像、背景画像）&lt;/li&gt;
+&lt;li&gt;src ・・・ベクトルファイル用フォルダ&lt;/li&gt;
+&lt;li&gt;model ・・・分類器用フォルダ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+
+&lt;div id="outline-container-org2c73d4e" class="outline-2"&gt;
+&lt;h2 id="org2c73d4e"&gt;ベクトルファイルの作成&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org2c73d4e"&gt;
+&lt;p&gt;
+まず正解画像を集めます。
+次に正解画像のリストファイルを作成します。
+&lt;/p&gt;
+
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;opencv_createsamples -info modified_positive.txt -vec hogehoge.vec -num 121 -w 64 -h 64
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;
+#+BEGIN&lt;sub&gt;SRC&lt;/sub&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgcab7d7f" class="outline-2"&gt;
+&lt;h2 id="orgcab7d7f"&gt;リストファイルの作り方&lt;/h2&gt;
+&lt;/div&gt;</description><category>OpenCV</category><category>python</category><guid>https://www.sn3y.com/posts/cascade-trainer1/</guid><pubDate>Wed, 23 May 2018 02:00:00 GMT</pubDate></item></channel></rss>

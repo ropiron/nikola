@@ -1,0 +1,44 @@
+   #+BEGIN_COMMENT
+   .. title: OpenCVカスケード分類器の作成方法
+   .. slug: cascade-trainer1
+   .. date: 2018-05-22 22:00:00 UTC-04:00
+   .. tags: OpenCV, python
+   .. link:
+   .. description:
+   .. type: text
+   #+END_COMMENT
+* 目標
+OpenCVを用いてカスケード分類器を作成する。
+今回は雑草の検知を目標とする。
+
+* 環境
++ Ubuntu 18.04
++ fish shell
++ Anaconda(Python3.7.6)
++ OpenCV
+
+
+カスケード分類器の詳細については、他ブログ参照のこと。
+
+* 作業フォルダの作成
+作業フォルダを作成する。
++ pos ・・・正解画像用フォルダ（ポジティブ画像）
++ neg ・・・不正解画像用フォルダ（ネガティブ画像、背景画像）
++ src ・・・ベクトルファイル用フォルダ
++ model ・・・分類器用フォルダ
+
+
+
+* ベクトルファイルの作成
+まず正解画像を集めます。
+次に正解画像のリストファイルを作成します。
+
+
+
+#+BEGIN_SRC shell
+opencv_createsamples -info modified_positive.txt -vec hogehoge.vec -num 121 -w 64 -h 64
+#+END_SRC
+
+
+#+BEGIN_SRC
+* リストファイルの作り方
